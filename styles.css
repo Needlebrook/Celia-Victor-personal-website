@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
 h1{
     text-align: center;
     font-size: 70px;
@@ -20,7 +27,6 @@ a {
   position: relative;
   z-index: 10;
 }
-
 
 /* SPINNER - INDEX.HTML */
 #spinner-overlay {
@@ -128,6 +134,24 @@ body.timeline-page {
   min-height: 100vh;
   margin: 0;
 }
+body.experiences-page {
+  background: linear-gradient(-45deg,#333333,#4a2c2c,#602626,#762020,#8d1a1a,#a31414,#ba0f0f,#dd1818);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  min-height: 100vh;
+  margin: 0;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+}
+
 
 /* CARDS - INDEX.HTML */
 .card {
@@ -214,6 +238,7 @@ body.timeline-page {
 }
 
 
+
 /* CONTACT BUTTONS - CONTACT.HTML */
 .contact-buttons {
   display: flex;
@@ -274,13 +299,26 @@ body.timeline-page {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   text-decoration: none;
 }
-
 .contact-btn:hover:not(.email) {/* Hover effect */
   transform: scale(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 /* BACK TO HOME BUTTON - ALL PAGES EXCEPT INDEX.HTML */
+.back-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.back-btn:hover {
+  background-color: white;
+  color: #2c5364;
+}
 .back-to-home {
   text-align: center;
   margin: 50px 0 20px;
@@ -304,7 +342,6 @@ body.timeline-page {
   max-width: 900px;
   padding: 0 40px;
 }
-
 .timeline-vertical::before {
   content: '';
   position: absolute;
@@ -315,14 +352,12 @@ body.timeline-page {
   height: 100%;
   background-color: white;
 }
-
 .timeline-event {
   position: relative;
   width: 50%;
   padding: 20px 40px;
   box-sizing: border-box;
 }
-
 .timeline-event .timeline-dot {
   position: absolute;
   top: 15px;
@@ -333,44 +368,35 @@ body.timeline-page {
   border: 3px solid white;
   z-index: 1;
 }
-
 .timeline-event.left {
   left: 0;
   text-align: right;
 }
-
 .timeline-event.left .timeline-dot {
   right: -10px;
 }
-
 .timeline-event.left .timeline-content {
   margin-right: 60px;
 }
-
 .timeline-event.right {
   left: 50%;
   text-align: left;
 }
-
 .timeline-event.right .timeline-dot {
   left: -10px;
 }
-
 .timeline-event.right .timeline-content {
   margin-left: 60px;
 }
-
 .timeline-content {
   color: white;
   font-family: 'Quicksand', sans-serif;
 }
-
 .timeline-content h3 {
   font-size: 1.8rem;
   margin-bottom: 8px;
   font-weight: 700;
 }
-
 .timeline-content p {
   font-size: 1.2rem;
   line-height: 1.6;
@@ -401,6 +427,8 @@ body.timeline-page {
 }
 
 /* PROJECT CARDS - PROJECT.HTML */
+
+/* Flip Card Container */
 .flip-card {
   width: 300px;
   height: 350px;
@@ -408,6 +436,7 @@ body.timeline-page {
   margin: 20px auto;
 }
 
+/* Flip Inner */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -416,22 +445,35 @@ body.timeline-page {
   transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* FRONT */
-
-.flip-card-front {
+/* Shared styles for front and back */
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+/* Flip on hover (desktop) or .flipped (mobile) */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-/* Blurred full-image layer */
+
+
+/* FRONT */
+
+.flip-card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+
+
+}
+
+/* Blurred image on front */
 .blurred-image {
   position: absolute;
   width: 100%;
@@ -440,9 +482,11 @@ body.timeline-page {
   background-position: center;
   filter: blur(4px) brightness(0.7);
   z-index: 0;
+  top: 0;
+  left: 0;
 }
 
-/* Crisp title layer on top */
+/* Overlay text */
 .overlay-text {
   position: absolute;
   z-index: 1;
@@ -453,6 +497,13 @@ body.timeline-page {
   justify-content: center;
 }
 
+/* Hide overlay text on flip (mobile-safe) */
+.flip-card:hover .overlay-text,
+.flip-card.flipped .overlay-text {
+  display: none;
+}
+
+/* Project Title */
 .project-title {
   color: white;
   font-size: 1.6rem;
@@ -466,23 +517,19 @@ body.timeline-page {
 /* BACK */
 
 .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   transform: rotateY(180deg);
-  backface-visibility: hidden;
-  border-radius: 10px;
   background-color: #222;
   color: white;
   padding: 20px;
-  overflow-y: auto;  /* allows content scroll if needed */
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  z-index: 1;
 }
 
-
+/* Image at the back */
 .back-image {
   width: 100%;
   height: 150px;
@@ -491,22 +538,7 @@ body.timeline-page {
   margin-bottom: 10px;
 }
 
+/* Tech badges */
 .tech-stack .badge {
   margin: 3px;
 }
-/* PROJECTS.HTML*/
-body.projects-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  flex: 1;
-}
-
-.back-to-home {
-  text-align: center;
-  padding: 20px;
-}
-
