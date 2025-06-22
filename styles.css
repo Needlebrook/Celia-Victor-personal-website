@@ -27,6 +27,11 @@ a {
   position: relative;
   z-index: 10;
 }
+@media (max-width: 768px) {
+  .img-fluid {
+    margin-bottom: 20px;
+  }
+}
 
 /* SPINNER - INDEX.HTML */
 #spinner-overlay {
@@ -63,6 +68,22 @@ a {
   position: relative;
   z-index: 1;
 }
+
+/* ICONS - INDEX.HTML */
+.language-icons {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content:center;
+  gap: 10px; 
+  margin-bottom: 30px;
+}
+.lang-icon {
+  width: 60px;
+  height: auto;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
 
 /* ACCORDION - Q&A.HTML */
 .accordion-item{
