@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+body,html {
   overflow-x: hidden;
 }
 h1{
@@ -68,6 +68,10 @@ a {
   position: relative;
   z-index: 1;
 }
+.tagline {
+  margin-bottom: 3rem; 
+}
+
 
 /* ICONS - INDEX.HTML */
 .language-icons {
