@@ -9,9 +9,33 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+          p {
+            font-size: 1.5rem;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
+          }
+          .profile-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+          }
+          .summary-box {
+            background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.1rem;
+          }
+
+
+        </style>
         <title>Celia Victor</title>
     </head>
-    <body>
+    <body class="index-page">
 <!----Spinner-->
         <div id="spinner-overlay">
             <div class="spinner-border custom-spinner" role="status">
@@ -32,7 +56,30 @@
             Your browser does not support the video tag.
           </video>
 
+          <div class="container my-5">
+          <div class="row align-items-center">
 
+    <!-- Image Column -->
+    <div class="col-md-5 text-center mb-4 mb-md-0">
+      <img src="media/profile_picture.jpeg" alt="Your Name" class="img-fluid profile-image">
+    </div>
+
+    <!-- Summary Column -->
+    <div class="col-md-7">
+      <div class="summary-box">
+      <p>
+        Hello! I'm Celia Victor, and I just wanted to welcome you to my website!
+        <br>
+        I’m a curious and enthusiastic learner passionate about trying new things. I'm currently exploring data science,
+        backend development, and cloud computing. I always bring my best effort to the table.
+        <br>
+        Making this website was a lot of fun! I hope you enjoy browsing it too.
+      </p>
+      </div>
+    </div>
+
+  </div>
+</div>
 
         <div class="row g-4">
   <!-- Row 1: First 3 cards -->
