@@ -24,4 +24,4 @@ Hosted on GitHub Pages at https://needlebrook.github.io/Celia-Victor-personal-we
 
 ## Author
 
-- [@Needlebrook](https://www.github.com/Needlebrook)
+- [@Needlebrook](https://www.github.com/Needlebrook) Celia Victor
