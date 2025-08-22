@@ -1,7 +1,7 @@
 # Celia Victor's Personal Website 💻
 
 Made in June 2025 to document & showcase my skills, projects & experiences.
-This site isn’t just a portfolio. it’s a personal project I thoroughly enjoyed making. It’s also a playground for experimenting with code, design, and ideas.
+This site isn’t just a portfolio, it was a personal project I thoroughly enjoyed making. I also used this oppertunity to experiment with code, design, and ideas.
 Also made as as one of the submissions for Week 8 of CS50x.
 
 # About This Site 🌟
