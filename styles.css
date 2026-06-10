@@ -54,25 +54,6 @@ a {
 
 }
 
-/* BG VIDEO - INDEX.HTML */
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
-.content-overlay {
-  position: relative;
-  z-index: 1;
-}
-.tagline {
-  margin-bottom: 3rem; 
-}
-
-
 /* ICONS - INDEX.HTML */
 .language-icons {
   display: flex;
@@ -145,7 +126,7 @@ body.projects-page {
   min-height: 100vh;
   margin: 0;
 }
-body.contact-page {
+body.experiences-page {
   background: linear-gradient(120deg,#fc00ff,#00dbde);
   background-size: 400% 400%;
   animation: gradientShift 25s ease infinite;
@@ -159,7 +140,7 @@ body.timeline-page {
   min-height: 100vh;
   margin: 0;
 }
-body.experiences-page {
+body.contact-page {
   background: linear-gradient(-45deg,#333333,#4a2c2c,#602626,#762020,#8d1a1a,#a31414,#ba0f0f,#dd1818);
   background-size: 400% 400%;
   animation: gradientShift 10s ease infinite;
@@ -176,92 +157,6 @@ body.experiences-page {
   padding: 20px;
   margin: 0;
 }
-
-
-/* CARDS - INDEX.HTML */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: none;
-  border-radius: 20px;
-  padding: 20px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-}
-
-.card-1 { /* Card 1 - Solid Red with diagonal pattern */
-  background: repeating-linear-gradient(
-    45deg,
-    #e63946,
-    #e63946 10px,
-    #d62828 10px,
-    #d62828 20px
-  );
-}
-.card-2 { /* Card 2 - Solid Blue with subtle dots */
-  background-color: #457b9d;
-  background-image: radial-gradient(#ffffff20 1px, transparent 1px);
-  background-size: 10px 10px;
-}
-.card {
-  border: none;
-  border-radius: 14px;
-  height: 150px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  text-align: center;
-}
-.card:hover { /* Hover scale */
-  transform: scale(1.05);
-}
-.card-3 { /* Card 3 – Deep Purple with wave texture */
-  background-color: #5f0f40;
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.04) 0px,
-    rgba(255, 255, 255, 0.04) 4px,
-    transparent 4px,
-    transparent 8px
-  );
-}
-.card-4 { /* Card 4 – Forest Green with grid texture */
-  background-color: #1b4332;
-  background-image: linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
-                    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-.card-5 { /* Card 5 – Midnight Blue with diagonal lines */
-  background-color: #1b263b;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.05) 0px,
-    rgba(255, 255, 255, 0.05) 2px,
-    transparent 2px,
-    transparent 6px
-  );
-}
-.card-6 { /* Card 6 – Dark Orange with horizontal lines */
-  background-color: #e76f51;
-  background-image: repeating-linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.05) 0px,
-    rgba(255, 255, 255, 0.05) 1px,
-    transparent 1px,
-    transparent 6px
-  );
-}
-
 
 
 /* CONTACT BUTTONS - CONTACT.HTML */
