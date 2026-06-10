@@ -30,6 +30,20 @@
             font-family: 'Quicksand', sans-serif;
             font-size: 1.1rem;
           }
+          #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: #050816;
+        }
+
+        .content-overlay {
+            position: relative;
+            z-index: 2;
+        }
         </style>
         <title>Celia Victor</title>
     </head>
@@ -44,15 +58,9 @@
 
 
           <h1 class=fancy-heading>Welcome to Celia's website!</h1>
-          <br>
           <p class="tagline">Explore my journey, skills, and creative work</p>
-          <br>
-          <br>
-          <!-- Background Video -->
-          <video autoplay muted loop playsinline id="bg-video">
-            <source src="media/background-main.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+
+          <canvas id="bg-canvas"></canvas>
 
           <div class="container my-5">
           <div class="row align-items-center">
@@ -66,11 +74,11 @@
     <div class="col-md-7">
       <div class="summary-box">
       <p>
-        Hello! I'm Celia Victor, and I just wanted to welcome you to my personalwebsite!
+        Hello! I'm Celia Victor, and this is my personal website!
         <br>
         I'm always trying new things. I'm currently exploring Database Management, DevOps & Cloud computing. I always strive to the best of my ability to improve myself and learn new skills, and I hope to share my journey with you through this website.
         <br>
-        Making this website was a lot of fun! I hope you enjoy browsing thoughit too.
+        Making this website was a lot of fun! I hope you enjoy browsing through it too.
       </p>
       </div>
     </div>
@@ -138,20 +146,6 @@
     </a>
   </div>
 </div>
-
-<!---<div class="col-md-4">
-  <a href="skills.html" class="text-decoration-none">
-    <div class="card text-white card-3">
-      <div class="card-body">
-        <h5 class="card-title">Skills</h5>
-      </div>
-    </div>
-  </a>
-</div>-->
-
-
-
-
 
   </div>
 </div>
